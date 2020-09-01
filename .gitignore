@@ -38,3 +38,13 @@ yarn-debug.log*
 # CI framgia
 .framgia-ci-reports/
 .framgia-ci-result.temp.yml
+
+# Add config files and test folder to gitignore
+/config/credentials.yml.enc
+/config/database.yml
+/test
+
+# Install gem config
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

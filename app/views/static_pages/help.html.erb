@@ -1,0 +1,8 @@
+<% provide :title, t("pages.help.subtitle") %>
+<h1><%= t "pages.help.subtitle" %></h1>
+<p>
+  <%= t "pages.help.help_html", 
+          help_href: link_to(t("pages.help.help_href"), Settings.link.help_link),
+          book_href: link_to(t("pages.help.book_href"), Settings.link.book_link)
+        %>
+</p>

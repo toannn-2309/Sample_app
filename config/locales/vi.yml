@@ -1,0 +1,27 @@
+vi:
+  layout:
+    title: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
+    vi: "Tiếng Việt"
+    en: "Tiếng Anh"
+  pages:
+    home:
+      subtitle: "Trang chủ"
+      title: "Ứng Dụng Mẫu"
+      home_html: "Đây là trang chủ của ứng dụng mẫu %{href} ."
+      home_href: "Hướng dẫn Ruby on Rails"
+    help:
+      subtitle: "Trợ giúp"
+      help_html: "Nhận trợ giúp về hướng dẫn Ruby on Rails tại %{help_href}. Để nhận trợ giúp về ứng dụng mẫu này, hãy xem %{book_href}"
+      help_href: "trang trợ giúp Rails"
+      book_href: "quyển sách Hướng dẫn Ruby on Rails"
+    about:
+      subtitle: "Giới thiệu"
+      about_html: "%{tutorial_href}, một phần của hướng dẫn %{learn_href}, là một %{book_href} và %{series_href} để dạy phát triển web với %{ror_href}. Đây là ứng dụng mẫu cho hướng dẫn."
+      tutorial_href: "Hướng dẫn về Ruby on Rails"
+      learn_href: "Learn Enough"
+      series_href: "video hướng dẫn"
+      ror_href: "Ruby on Rails"
+    contact:
+      subtitle: "Liên hệ"
+      contact_html: "Liên hệ với Hướng dẫn Ruby on Rails về ứng dụng mẫu tại %{contact_href}."
+      contact_href: "trang liên hệ"
