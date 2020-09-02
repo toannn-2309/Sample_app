@@ -3,12 +3,24 @@ en:
     title: "Ruby on Rails Tutorial Sample App"
     vi: "Vietnamese"
     en: "English"
+    header:
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+    footer:
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      author_html: "The %{home_href} by %{author_href}"
+      author_href: "Michael Hartl"
   pages:
     home:
+      welcome: "Welcome to the Sample App"
       subtitle: "Home"
       title: "Sample App"
       home_html: "This is the home page for the %{href} sample application."
       home_href: "Ruby on Rails Tutorial"
+      sign_up_now: "Sign up now!"
     help:
       subtitle: "Help"
       help_html: "Get help on the Ruby on Rails Tutorial at the %{help_href}. To get help on this sample app, see the %{book_href}"
@@ -25,3 +37,6 @@ en:
       subtitle: "Contact"
       contact_html: "Contact the Ruby on Rails Tutorial about the sample app at the %{contact_href}."
       contact_href: "contact page"
+    signup:
+      title: "Sign up"
+      description: "This will be a signup page for new users."
