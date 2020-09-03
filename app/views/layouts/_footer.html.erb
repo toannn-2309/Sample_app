@@ -1,0 +1,17 @@
+<footer class="footer">
+  <div class="container">
+    <small>
+      <%= t "layout.footer.author_html", 
+          home_href: link_to(t("pages.home.home_href"), Settings.link.tutorial_link),
+          author_href: link_to(t("layout.footer.author_href"), Settings.link.author_link)
+        %>
+    </small>
+    <nav>
+      <ul>
+        <li><%= link_to t("layout.footer.about"), about_path %></li>
+        <li><%= link_to t("layout.footer.contact"), contact_path %></li>
+        <li><%= link_to t("layout.footer.news"), Settings.link.news_link %></li>
+      </ul>
+    </nav>
+  </div>
+</footer>

@@ -3,12 +3,24 @@ vi:
     title: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
     vi: "Tiếng Việt"
     en: "Tiếng Anh"
+    header:
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      log_in: "Đăng nhập"
+    footer:
+      about: "Giới thiệu"
+      contact: "Liên hệ"
+      news: "Tin tức"
+      author_html: "%{home_href} của %{author_href}"
+      author_href: "Michael Hartl"
   pages:
     home:
+      welcome: "Chào mừng bạn đến với Sample App"
       subtitle: "Trang chủ"
       title: "Ứng Dụng Mẫu"
       home_html: "Đây là trang chủ của ứng dụng mẫu %{href} ."
       home_href: "Hướng dẫn Ruby on Rails"
+      sign_up_now: "Đăng ký ngay!"
     help:
       subtitle: "Trợ giúp"
       help_html: "Nhận trợ giúp về hướng dẫn Ruby on Rails tại %{help_href}. Để nhận trợ giúp về ứng dụng mẫu này, hãy xem %{book_href}"
@@ -25,3 +37,6 @@ vi:
       subtitle: "Liên hệ"
       contact_html: "Liên hệ với Hướng dẫn Ruby on Rails về ứng dụng mẫu tại %{contact_href}."
       contact_href: "trang liên hệ"
+    signup:
+      title: "Đăng ký"
+      description: "Đây sẽ là trang đăng ký cho người dùng mới."
