@@ -4,6 +4,6 @@
   <h2>
     <%= t "pages.home.home_html", href: link_to(t("pages.home.home_href"), Settings.link.tutorial_link) %>
   </h2>
-  <%= link_to t("pages.home.sign_up_now"), signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to t("pages.home.sign_up_now"), signup_path, class: "btn btn-lg btn-primary" unless logged_in? %>
 </div>
 <%= link_to image_tag("rails_svg.png", alt: "Rails logo", width: "200px"), Settings.link.tutorial_link %>

@@ -53,17 +53,32 @@ vi:
       title: "Đăng nhập"
       sign_up: "Đăng ký ngay"
       remember_me: "Ghi nhớ trên máy tính"
-# Controller User
+# Controller and view user
   user:
     noti:
       danger: "Tạo tài khoản thất bại"
       show: "Người dùng không tồn tại"
+      update_true: "Hồ sơ đã được cập nhật"
+      update_fail: "Cập nhật thất bại"
+      destroy_true: "Người dụng đã được xóa"
+      destroy_fail: "Xóa thất bại"
+      log_in: "Vui lòng đăng nhập"
     new:
       btn_submit: "Tạo tài khoản của bạn"
       name: "Tên"
       email: "Thư điện tử"
       password: "Mật khẩu"
       confirmation: "Nhập lại mật khẩu"
+    edit:
+      btn_edit: "Lưu thay đổi"
+      edit_title: "Chỉnh sửa người dùng"
+      sub_title: "Cập nhật hồ sơ của bạn"
+      change: "Thay đổi"
+      error_pw: "không được trùng với tên người dùng"
+    index:
+      index_title: "Tất cả người dùng"
+      confirm: "Bạn chắc chứ?"
+      delete: "Xóa"
 # Controller Session
   session:
     noti:
