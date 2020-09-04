@@ -22,7 +22,7 @@ en:
 # View Pages
   pages:
     home:
-      welcome: "Welcome to the Sample App"
+      check_mail: "Please check your email for account activation"
       subtitle: "Home"
       title: "Sample App"
       home_html: "This is the home page for the %{href} sample application."
@@ -83,3 +83,15 @@ en:
   session:
     noti:
       danger: "Invalid email/password combination"
+      warning: "Account not activated. Check your email for the activation link."
+# Controller AccountActivation
+  activation:
+    noti:
+      success: "Account activated!"
+      danger: "Invalid activation link"
+    mailer:
+      hi: "Hi %{user_name},"
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+      subject: "Account activation"
+      title: "Sample App"
