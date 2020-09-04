@@ -40,3 +40,15 @@ vi:
     signup:
       title: "Đăng ký"
       description: "Đây sẽ là trang đăng ký cho người dùng mới."
+    error:
+      noti: "Biểu mẫu chứa "
+  user:
+    noti:
+      danger: "Tạo tài khoản thất bại"
+      show: "Người dùng không tồn tại"
+    new:
+      btn_submit: "Tạo tài khoản của bạn"
+      name: "Tên"
+      email: "Thư điện tử"
+      password: "Mật khẩu"
+      confirmation: "Nhập lại mật khẩu"
