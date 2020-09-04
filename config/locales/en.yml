@@ -1,4 +1,5 @@
 en:
+# View Layout
   layout:
     title: "Ruby on Rails Tutorial Sample App"
     vi: "Vietnamese"
@@ -7,12 +8,18 @@ en:
       home: "Home"
       help: "Help"
       log_in: "Log in"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
+      account: "Account"
+      users: "Users"
     footer:
       about: "About"
       contact: "Contact"
       news: "News"
       author_html: "The %{home_href} by %{author_href}"
       author_href: "Michael Hartl"
+# View Pages
   pages:
     home:
       welcome: "Welcome to the Sample App"
@@ -42,6 +49,10 @@ en:
       description: "This will be a signup page for new users."
     error:
       noti: "The form contains "
+    login:
+      title: "Log in"
+      sign_up: "Sign Up Now!"
+# Controller User
   user:
     noti:
       danger: "Account creation failed!"
@@ -52,3 +63,7 @@ en:
       email: "Email"
       password: "Password"
       confirmation: "Confirmation"
+# Controller Session
+  session:
+    noti:
+      danger: "Invalid email/password combination"

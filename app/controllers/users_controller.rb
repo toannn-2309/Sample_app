@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      log_in @user
       flash[:success] = t "pages.home.welcome"
       redirect_to @user
     else
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
   private
 
   def get_user
-    @user = User.find_by params[:id]
+    @user = User.find_by id: params[:id]
     return if @user
 
     flash[:danger] = t "user.noti.show"
