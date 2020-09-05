@@ -52,6 +52,7 @@ en:
     login:
       title: "Log in"
       sign_up: "Sign Up Now!"
+      remember_me: "Remember me on this computer"
 # Controller User
   user:
     noti:
