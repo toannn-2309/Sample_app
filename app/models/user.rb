@@ -8,7 +8,8 @@ class User < ApplicationRecord
   validates :name, length: {maximum: Settings.user.name.length}
   validates :email, length: {maximum: Settings.user.email.length},
   format: {with: VALID_EMAIL_REGEX}, uniqueness: true
-  validates :password, length: {minimum: Settings.user.password.length}
+  validates :password, length: {minimum: Settings.user.password.length},
+              exclusion: {in: :name, message: I18n.t("user.edit.error_pw")}
 
   before_save :downcase_email
 

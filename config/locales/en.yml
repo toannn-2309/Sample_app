@@ -53,17 +53,32 @@ en:
       title: "Log in"
       sign_up: "Sign Up Now!"
       remember_me: "Remember me on this computer"
-# Controller User
+# Controller and view user
   user:
     noti:
       danger: "Account creation failed!"
       show: "User does not exist"
+      update_true: "Profile updated"
+      update_fail: "Update failed"
+      destroy_true: "User deleted"
+      destroy_fail: "Delete failed"
+      log_in: "Please log in."
     new:
       btn_submit: "Create my account"
       name: "Name"
       email: "Email"
       password: "Password"
       confirmation: "Confirmation"
+    edit:
+      btn_edit: "Save changes"
+      edit_title: "Edit user"
+      sub_title: "Update your profile"
+      change: "Change"
+      error_pw: "cannot match the username"
+    index:
+      index_title: "All users"
+      confirm: "You sure?"
+      delete: "Delete"
 # Controller Session
   session:
     noti:
