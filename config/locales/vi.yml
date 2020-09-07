@@ -1,4 +1,5 @@
 vi:
+# View Layout
   layout:
     title: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
     vi: "Tiếng Việt"
@@ -7,12 +8,18 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       log_in: "Đăng nhập"
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      log_out: "Đăng xuất"
+      account: "Tài khoản"
+      users: "Người dùng"
     footer:
       about: "Giới thiệu"
       contact: "Liên hệ"
       news: "Tin tức"
       author_html: "%{home_href} của %{author_href}"
       author_href: "Michael Hartl"
+# View Pages
   pages:
     home:
       welcome: "Chào mừng bạn đến với Sample App"
@@ -42,6 +49,10 @@ vi:
       description: "Đây sẽ là trang đăng ký cho người dùng mới."
     error:
       noti: "Biểu mẫu chứa "
+    login:
+      title: "Đăng nhập"
+      sign_up: "Đăng ký ngay"
+# Controller User
   user:
     noti:
       danger: "Tạo tài khoản thất bại"
@@ -52,3 +63,7 @@ vi:
       email: "Thư điện tử"
       password: "Mật khẩu"
       confirmation: "Nhập lại mật khẩu"
+# Controller Session
+  session:
+    noti:
+      danger: "Thư điện tử hoặc mật khẩu không đúng"
