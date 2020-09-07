@@ -53,6 +53,13 @@ vi:
       title: "Đăng nhập"
       sign_up: "Đăng ký ngay"
       remember_me: "Ghi nhớ trên máy tính"
+      forgot_pw: "(Quên mật khẩu)"
+    forgot_pw:
+      title: "Quên mật khẩu"
+      submit: "Gửi"
+    edit_pw:
+      title: "Đặt lại mật khẩu"
+      submit: "Cập nhật mật khẩu"
 # Controller and view user
   user:
     noti:
@@ -95,3 +102,21 @@ vi:
       activate: "Kích hoạt"
       subject: "Kích hoạt tài khoản"
       title: "Ứng dụng mẫu"
+# Controller PasswordResets
+  pw_reset:
+    noti:
+      send_mail: "Kiểm tra email để đặt lại mật khẩu"
+      mail_fail: "Không tìm thấy địa chỉ email"
+      pw_empty: "không được để trống"
+      pw_pass:  "Mật khẩu đã được đặt lại"
+      pw_fail: "Cập nhật mật khẩu không thành công"
+      pw_expired: "Đặt lại mật khẩu đã hết hạn."
+      invalid_user: "Tài khoản chưa kích hoạt hoặc mã đặt lại mật khẩu không hợp lệ"
+    mailer:
+      subject: "Đặt lại mật khẩu"
+    send_mail:
+      title: "Đặt lại mật khẩu"
+      text_one: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới: "
+      text_two: "Liên kết này sẽ hết hạn sau mười phút.
+                  Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và
+                  mật khẩu của bạn sẽ vẫn như cũ."

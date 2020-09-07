@@ -53,6 +53,13 @@ en:
       title: "Log in"
       sign_up: "Sign Up Now!"
       remember_me: "Remember me on this computer"
+      forgot_pw: "(Forgot password)"
+    forgot_pw:
+      title: "Forgot password"
+      submit: "Submit"
+    edit_pw:
+      title: "Reset password"
+      submit: "Update password"
 # Controller and view user
   user:
     noti:
@@ -95,3 +102,21 @@ en:
       activate: "Activate"
       subject: "Account activation"
       title: "Sample App"
+# Controller PasswordResets
+  pw_reset:
+    noti:
+      send_mail: "Email sent with password reset instructions"
+      mail_fail: "Email address not found"
+      pw_empty: "can't be empty"
+      pw_pass:  "Password has been reset."
+      pw_fail: "Password update failed"
+      pw_expired: "Password reset has expired."
+      invalid_user: "The account has not been activated or the password reset code is invalid"
+    mailer:
+      subject: "Password reset"
+    send_mail:
+      title: "Password reset"
+      text_one: "To reset your password click the link below: "
+      text_two: "This link will expire in ten minutes.
+                  If you did not request your password to be reset, please ignore this email and
+                  your password will stay as it is. "
