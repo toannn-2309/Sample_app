@@ -52,6 +52,7 @@ vi:
     login:
       title: "Đăng nhập"
       sign_up: "Đăng ký ngay"
+      remember_me: "Ghi nhớ trên máy tính"
 # Controller User
   user:
     noti:

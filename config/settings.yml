@@ -18,3 +18,5 @@ user:
     length: 6
   gravatar:
     size: 80
+session:
+  remember: "1"
