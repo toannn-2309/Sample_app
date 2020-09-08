@@ -8,6 +8,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views"
 gem "config"
 gem "faker"
+gem "figaro"
 gem "jbuilder", "~> 2.7"
 gem "kaminari"
 gem "mysql2", ">= 0.4.4"
