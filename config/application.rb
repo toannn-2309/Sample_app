@@ -11,5 +11,8 @@ module SampleApp
     config.i18n.default_locale = :en
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}")]
     config.middleware.use I18n::JS::Middleware
+
+    # Include the authenticity token in remote forms.
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

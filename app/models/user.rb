@@ -5,11 +5,17 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
 
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+    foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+    foreign_key: :followed_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   validates :name, :email, presence: true
   validates :name, length: {maximum: Settings.user.name.length}
   validates :email, length: {maximum: Settings.user.email.length},
-  format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: true}
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: true}
   validates :password, presence: true,
                       length: {minimum: Settings.user.password.length},
                       allow_nil: true
@@ -74,7 +80,19 @@ class User < ApplicationRecord
   end
 
   def feed
-    microposts.order_post
+    Micropost.order_post.user_feed following_ids << id
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
   end
 
   private

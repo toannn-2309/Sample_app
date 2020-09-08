@@ -3,6 +3,14 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
+  def load_user
+    @user = User.find_by id: params[:user_id]
+    return if @user
+
+    flash[:danger] = t "user.noti.show"
+    redirect_to root_path
+  end
+
   private
 
   def set_locale
