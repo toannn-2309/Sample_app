@@ -2,13 +2,15 @@ class User < ApplicationRecord
   USERS_PARAMS = %i(name email password password_confirmation).freeze
   VALID_EMAIL_REGEX = Settings.user.email.regex
 
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
-  validates :name, :email, :password, presence: true
+  validates :name, :email, presence: true
   validates :name, length: {maximum: Settings.user.name.length}
   validates :email, length: {maximum: Settings.user.email.length},
-  format: {with: VALID_EMAIL_REGEX}, uniqueness: true
-  validates :password, length: {minimum: Settings.user.password.length}
+  format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: true}
+  validates :password, presence: true,
+                      length: {minimum: Settings.user.password.length},
+                      allow_nil: true
 
   before_save :downcase_email
   before_create :create_activation_digest
@@ -38,8 +40,7 @@ class User < ApplicationRecord
   end
 
   def activate
-    update_attribute :activated, true
-    update_attribute :activated_at, Time.zone.now
+    update activated: true, activated_at: Time.zone.now
   end
 
   def send_activation_email
@@ -55,6 +56,19 @@ class User < ApplicationRecord
     return false unless digest
 
     BCrypt::Password.new(digest).is_password? token
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < Settings.time_expired.minutes.ago
   end
 
   private
