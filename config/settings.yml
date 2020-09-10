@@ -19,7 +19,13 @@ user:
     length: 6
   gravatar:
     size: 80
-  per_page: 10
+    size_post: 50
+per_page: 10
 session:
   remember: "1"
 time_expired: 10
+post:
+  length: 140
+  size: 5
+  m_size: 500
+  file_image: [image/jpeg, image/gif, image/png]

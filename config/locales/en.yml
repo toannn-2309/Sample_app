@@ -120,3 +120,21 @@ en:
       text_two: "This link will expire in ten minutes.
                   If you did not request your password to be reset, please ignore this email and
                   your password will stay as it is. "
+# Controller Microposts, model, view
+  post:
+    noti:
+      post_created: "Micropost created!"
+      create_fail: "Micropost creation failed"
+      post_deleted: "Micropost deleted"
+      delete_fail: "Failed to delete the micropost"
+      size_fail_js: "Maximum file size is 5MB. Please choose a smaller file."
+      format_post: "must be a valid image format"
+      size_post: "should be less than 5MB"
+      time_post: "Posted %{time} ago."
+    view:
+      placeholder: "Compose new micropost..."
+      btn_post: "Post"
+      my_profile: "View my profile"
+      micropost: "micropost"
+      feed: "Micropost Feed"
+      count_post: "Microposts ( %{count} )"

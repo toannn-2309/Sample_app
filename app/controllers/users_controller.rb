@@ -5,14 +5,17 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.activated.page(params[:page]).per Settings.user.per_page
+    @users = User.activated.page(params[:page]).per Settings.per_page
   end
 
   def new
     @user = User.new
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.order_post
+                       .page(params[:page]).per Settings.per_page
+  end
 
   def edit; end
 
@@ -33,7 +36,7 @@ class UsersController < ApplicationController
       flash[:success] = t "user.noti.update_true"
       redirect_to @user
     else
-      flash[:danger] = t "user.noti.update_fail"
+      flash.now[:danger] = t "user.noti.update_fail"
       render :edit
     end
   end
@@ -59,14 +62,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::USERS_PARAMS
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "user.noti.log_in"
-    redirect_to login_url
   end
 
   def correct_user

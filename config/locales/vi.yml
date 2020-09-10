@@ -120,3 +120,21 @@ vi:
       text_two: "Liên kết này sẽ hết hạn sau mười phút.
                   Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và
                   mật khẩu của bạn sẽ vẫn như cũ."
+# Controller Microposts
+  post:
+    noti:
+      post_created: "Tạo bài đăng thành công!"
+      create_fail: "Tạo bài đăng thất bại"
+      post_deleted: "Xóa bài đăng thành công"
+      delete_fail: "Xóa bài đăng thất bại"
+      size_fail_js: "Kích thước tệp tối đa là 5MB. Vui lòng chọn một tệp nhỏ hơn"
+      format_post: "phải là định dạng hình ảnh hợp lệ"
+      size_post: "phải nhỏ hơn 5MB"
+      time_post: "Đã đăng %{time} trước."
+    view:
+      placeholder: "Soạn bài đăng mới..."
+      btn_post: "Đăng bài"
+      my_profile: "Xem thông tin của tôi"
+      micropost: "bài đăng"
+      feed: "Micropost Feed"
+      count_post: "Baì đăng (%{count})"

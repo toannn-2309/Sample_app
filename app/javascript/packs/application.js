@@ -10,3 +10,4 @@ global.$ = global.jQuery = jQuery;
 window.$ = window.jQuery = jQuery;
 
 import 'bootstrap'
+import './micropost'
