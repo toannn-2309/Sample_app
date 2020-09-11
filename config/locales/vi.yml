@@ -138,3 +138,11 @@ vi:
       micropost: "bài đăng"
       feed: "Micropost Feed"
       count_post: "Baì đăng (%{count})"
+# Controller Follower, Following and view
+  follow:
+    following: "Đang theo dõi"
+    follower: "Người theo dõi"
+    btn_follow: "Theo dõi"
+    btn_unfollow: "Bỏ theo dõi"
+    follow_fail: "Theo dõi thất bại"
+    unfollow_fail: "Bỏ theo dõi thất bại"

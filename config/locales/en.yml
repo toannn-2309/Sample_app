@@ -138,3 +138,12 @@ en:
       micropost: "micropost"
       feed: "Micropost Feed"
       count_post: "Microposts ( %{count} )"
+
+# Controller Follower, Following and view
+  follow:
+    following: "Following"
+    follower: "Follower"
+    btn_follow: "Follow"
+    btn_unfollow: "Unfollow"
+    follow_fail: "Follow fail"
+    unfollow_fail: "Unfollow fail"

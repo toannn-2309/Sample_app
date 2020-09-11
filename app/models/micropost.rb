@@ -14,6 +14,7 @@ class Micropost < ApplicationRecord
   delegate :name, to: :user, prefix: true
 
   scope :order_post, ->{order created_at: :desc}
+  scope :user_feed, ->(user_id){where user_id: user_id}
 
   def display_image
     image.variant resize_to_limit: [Settings.post.m_size, Settings.post.m_size]
