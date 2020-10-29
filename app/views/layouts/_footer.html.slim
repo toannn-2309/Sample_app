@@ -1,0 +1,11 @@
+footer.footer
+  small
+    = t "layout.footer.author_html", home_href: link_to(t("pages.home.home_href"), Settings.link.tutorial_link), author_href: link_to(t("layout.footer.author_href"), Settings.link.author_link)
+  nav
+    ul
+      li
+        = link_to t("layout.footer.about"), about_path
+      li
+        = link_to t("layout.footer.contact"), contact_path
+      li
+        = link_to t("layout.footer.news"), Settings.link.news_link

@@ -1,0 +1,5 @@
+- provide :title, t("pages.contact.subtitle")
+h1
+  = t "pages.contact.subtitle"
+p
+  = t "pages.contact.contact_html", contact_href: link_to(t("pages.contact.contact_href"), Settings.link.contact_link)

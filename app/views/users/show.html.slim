@@ -1,0 +1,14 @@
+- provide :title, @user.name
+.row
+  aside.col-md-4
+    section.user_info
+      h1
+        = gravatar_for @user
+        = @user.name
+  .col-md-8
+    - if @user.microposts.any?
+      h3
+        = t "post.view.count_post", count: @user.microposts.size
+      ol.microposts
+        = render @microposts
+      = paginate @microposts, theme: "twitter-bootstrap-4"

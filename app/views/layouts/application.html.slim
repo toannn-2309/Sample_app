@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title
+      = full_title yield :title
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
+    = javascript_pack_tag "application", "data-turbolinks-track": "reload"
+    = javascript_include_tag "i18n"
+    = javascript_include_tag "translations", skip_pipeline: true
+  body
+    = render "layouts/header"
+    .container
+      = link_to t("layout.en"), locale: :en
+      |  | 
+      = link_to t("layout.vi"), locale: :vi
+      - flash.each do |message_type, message|
+        |  <div class="alert alert-
+        = message_type
+        | ">
+        = message
+      = yield
+      = render "layouts/footer"
+      = debug params if Rails.env.development?
+      script[type="text/javascript"]
+        |  I18n.defaultLocale = "<ruby code="= I18n.default_locale"></ruby>"; I18n.locale = "<ruby code="= I18n.locale"></ruby>"; 

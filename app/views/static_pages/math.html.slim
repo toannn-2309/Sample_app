@@ -1,0 +1,11 @@
+.row
+  .col-4.offset-4
+    = form_tag "/math", method: :get do
+      = label_tag :number_one, "Number one:"
+      = text_field_tag :number_one
+      = label_tag :number_two, "Number two:"
+      = text_field_tag :number_two
+      = select_tag "operator", options_for_select([ "Addition", "Subtraction", "Multiplication", "Division" ], "Addition")
+      = submit_tag "ket qua"
+    p ket qua:
+    = @result

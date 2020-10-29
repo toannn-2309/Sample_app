@@ -1,0 +1,9 @@
+- provide :title, t("pages.forgot_pw.title")
+h1
+  = t "pages.forgot_pw.title"
+.row
+  .col-md-6.offset-md-3
+    = form_for :password_reset, url: password_resets_path do |f|
+      = f.label :email, t("user.new.email")
+      = f.email_field :email, class: "form-control"
+      = f.submit t("pages.forgot_pw.submit"), class: "btn btn-primary"

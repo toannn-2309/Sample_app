@@ -11,4 +11,8 @@ class StaticPagesController < ApplicationController
   def about; end
 
   def contact; end
+
+  def math
+    @result = MathService.new(params).perform
+  end
 end

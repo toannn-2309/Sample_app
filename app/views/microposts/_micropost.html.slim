@@ -1,0 +1,13 @@
+| <li id="micropost-
+= micropost.id
+| "> 
+= link_to gravatar_for(micropost.user, size: Settings.user.gravatar.size_post), micropost.user
+span.user
+  = link_to micropost.user_name, micropost.user
+span.content
+  = micropost.content
+  = image_tag micropost.image if micropost.image.attached?
+span.timestamp
+  = t "post.noti.time_post", time: time_ago_in_words(micropost.created_at)
+  - if current_user? micropost.user
+    = link_to t("user.index.delete"), micropost, method: :delete, data: {confirm: t("user.index.confirm")}

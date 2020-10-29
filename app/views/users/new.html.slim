@@ -1,0 +1,7 @@
+- provide :title, t("pages.signup.title")
+- provide :button_text, t("user.new.btn_submit")
+h1
+  = t "pages.signup.title"
+.row
+  .col-md-6.offset-md-3
+    = render "form"
