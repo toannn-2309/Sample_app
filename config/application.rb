@@ -14,6 +14,14 @@ module SampleApp
 
     # Include the authenticity token in remote forms.
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    # config.active_job.queue_adapter = :sidekiq
+
+
+
+    # config.active_job.queue_adapter = ActiveJob::QueueAdapters::AsyncAdapter.new \
+    # min_threads: 1,
+    # max_threads: 2 * Concurrent.processor_count,
+    # idletime: 600.seconds
     config.autoload_paths << Rails.root.join('lib')
   end
 end
