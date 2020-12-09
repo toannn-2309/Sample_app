@@ -67,13 +67,12 @@ Rails.application.configure do
 
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-    address: ENV["address"],
-    port: ENV["port_mail"],
-    domain: ENV["domain"],
-    user_name: ENV["user_mail"],
-    password: ENV["password_mail"],
-    authentication: "plain",
-    enable_starttls_auto: true
+    user_name: ENV["mail_user_name"],
+    password: ENV["mail_user_password"],
+    address: ENV["mail_address"],
+    port: ENV["mail_port"],
+    authentication: :cram_md5,
+    enable_starttls_auto: true,
   }
   config.middleware.use I18n::JS::Middleware
 end

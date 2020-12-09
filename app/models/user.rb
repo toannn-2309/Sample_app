@@ -21,7 +21,7 @@ class User < ApplicationRecord
                       allow_nil: true
 
   before_save :downcase_email
-  before_create :create_activation_digest
+  # before_create :create_activation_digest
 
   has_secure_password
 
@@ -52,6 +52,9 @@ class User < ApplicationRecord
   end
 
   def send_activation_email
+    self.activation_token = User.new_token
+    update_attribute :activation_digest, User.digest(activation_token)
+    # self.activation_digest = User.digest activation_token
     UserMailer.account_activation(self).deliver_now
   end
 
