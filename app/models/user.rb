@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  USERS_PARAMS = %i(name email password password_confirmation).freeze
+  USERS_PARAMS = %i(name email password password_confirmation
+    lock_version).freeze
   VALID_EMAIL_REGEX = Settings.user.email.regex
 
   attr_accessor :remember_token, :activation_token, :reset_token

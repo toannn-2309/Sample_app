@@ -22,5 +22,6 @@ module SampleApp
     # min_threads: 1,
     # max_threads: 2 * Concurrent.processor_count,
     # idletime: 600.seconds
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
